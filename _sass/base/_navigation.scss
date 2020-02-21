@@ -19,14 +19,13 @@
         @include span-columns(2);
         @include font-size-rem(22);
         font-weight: 500;
-        text-indent: 15px;
+        text-indent: 19px;
         line-height: rem(30);
         width: 27.5%;
-        max-height: .8em;
+        max-height: 1.1em;
         background-image: url('/assets/images/vidardb-head-white.svg');
         background-repeat: no-repeat;
         background-size: contain;
-        vertical-align: middle;
         background-position: bottom left;
         margin-bottom: .9rem;
     }
@@ -141,7 +140,7 @@ body.pmr-open #wrapper { left: -50%; }
 
     a {
         color: $cream;
-        text-transform: lowercase;
+        // text-transform: lowercase;
     }
 
     // Mobile menu is initially hidden -- when opened, pushes from the right side
