@@ -213,6 +213,7 @@ body.landing .landing .hero-wrapper {
             @include omega-reset(2n);
             @include span-columns(5.5 of 12);
             @include omega(2n);
+            margin-left: rem(0);
 
             height: rem(420);
             overflow: hidden;
@@ -227,7 +228,7 @@ body.landing .landing .hero-wrapper {
             img {
                 float: none;
                 width: 100%;
-                margin-top: rem(22);
+                margin-top: rem(45);
                 margin-left: rem(0);
             }
             &:nth-child(even) { @include shift(1); }
