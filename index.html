@@ -29,7 +29,14 @@ body_class: landing
                 <img src="/assets/images/landing/vidardb-intro.png">
             </article>
             <article>
-
+                <div class="plyr__video-embed" id="player">
+                    <iframe
+                            src="https://www.youtube.com/embed/bTqVqk7FSmY?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+                            allowfullscreen
+                            allowtransparency
+                            allow="autoplay"
+                    ></iframe>
+                </div>
             </article>
         </div>
     </section>
@@ -55,7 +62,7 @@ body_class: landing
                         It is never required to dump your data from the database to your machine learning tool anymore.
                         VidarDB simplifies your process by directly running your machine learning algorithm inside the database.
                     </p>
-                    <img src="/assets/images/landing/4-column-store.png">
+                    <img src="/assets/images/landing/2-vidardb-ml.png">
                 </article>
                 <article>
                     <h2>Blazingly Fast Querying</h2>
@@ -66,7 +73,7 @@ body_class: landing
                         VidarDB is designed for <strong>modern memory architecture</strong>. Fresh data sit in RAM first,
                         and will be automatically flushed to secondary memory when RAM is full.
                     </p>
-                    <img src="/assets/images/landing/3-ram.png">
+                    <img src="/assets/images/landing/3-vidardb-ram.png">
                 </article>
                 <article>
                     <h2>Responsive Data Analysis</h2>
@@ -119,3 +126,8 @@ body_class: landing
         </div>
     </div>
 </div>
+
+<script src="https://cdn.plyr.io/3.5.10/plyr.js"></script>
+<script>
+    const player = new Plyr('#player');
+</script>
