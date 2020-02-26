@@ -22,20 +22,37 @@ body_class: landing
             <article>
                 <h1>What is VidarDB?</h1>
                 <p>
-                    Frustrated at managing various data processing tools, VidarDB comes to rescue.
-                    VidarDB is an <strong>open-source</strong>, unified database system with lightning speed (<strong>50~1000X faster</strong>)
-                    and <strong>in-place machine learning support</strong>.
+                    Frustrated at managing various data processing tools? VidarDB comes to rescue.
+                    VidarDB is an <strong>open-source</strong>, <strong>unified</strong> database system with lightning speed (<strong>50~1000X </strong>faster)
+                    and <strong>in-place machine learning </strong>support.
                 </p>
                 <img src="/assets/images/landing/vidardb-intro.png">
             </article>
             <article>
-                <div class="plyr__video-embed" id="player">
-                    <iframe
-                            src="https://www.youtube.com/embed/bTqVqk7FSmY?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
-                            allowfullscreen
-                            allowtransparency
-                            allow="autoplay"
-                    ></iframe>
+                <!--   <div class="plyr__video-embed" id="player">
+                       <iframe
+                               src="https://www.youtube.com/embed/bTqVqk7FSmY?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+                               allowfullscreen
+                               allowtransparency
+                               allow="autoplay"
+                       ></iframe>
+                   </div>  -->
+                <div style="margin-top:50px">
+                    <p style="height: 40px">
+                    </p>
+                    <video
+                            id="my-player"
+                            class="video-js"
+                            controls
+                            preload="auto"
+                            width="500"
+                            height="300"
+                            poster="//vjs.zencdn.net/v/oceans.png"
+                            data-setup='{}'>
+                        <source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4"></source>
+                        <source src="//vjs.zencdn.net/v/oceans.webm" type="video/webm"></source>
+                        <source src="//vjs.zencdn.net/v/oceans.ogv" type="video/ogg"></source>
+                    </video>
                 </div>
             </article>
         </div>
@@ -45,14 +62,17 @@ body_class: landing
     <div class="feature modern-stacks">
         <div class="site-container">
             <h1>How VidarDB Works?</h1>
-            <p>VidarDB can do everything PostgresSQL can do, but with our groundbreaking technology, we make VidarDB run like a speedy antelope.</p>
+            <p>
+                VidarDB can do everything PostgreSQL can do, but with our technology, a versatile storage engine,
+                we make VidarDB run like a speedy antelope.
+            </p>
             <section class="feature-content">
                 <article>
-                    <h2>PostgresSQL Frontend</h2>
+                    <h2>PostgreSQL Frontend</h2>
                     <p>
-                        Because VidarDB embraces PostgresSQL ecosystem,
-                        it uses the same terminal and driver as PostgresSQL. No need to change your code,
-                        while all the miracles happens underneath.
+                        Because VidarDB embraces PostgreSQL ecosystem,
+                        it uses the same terminal and driver as PostgreSQL. No need to change your code,
+                        while all the miracles happen underneath.
                     </p>
                     <img src="/assets/images/landing/1-postgres-frontend.png">
                 </article>
@@ -60,18 +80,17 @@ body_class: landing
                     <h2>In-place Machine Learning</h2>
                     <p>
                         It is never required to dump your data from the database to your machine learning tool anymore.
-                        VidarDB simplifies your process by directly running your machine learning algorithm inside the database.
+                        VidarDB simplifies your process by running your machine learning algorithm directly in the database
+                        via your familiar SQL.
                     </p>
                     <img src="/assets/images/landing/2-vidardb-ml.png">
                 </article>
                 <article>
                     <h2>Blazingly Fast Querying</h2>
                     <p>
-                        Just throw your data to VidarDB as frequent as you want,
-                        since VidarDB is <i><strong>50X</strong></i> faster in data ingestion; If you query the recent data,
-                        VidarDB offers up to <i><strong>1000X</strong></i> speedup. Unlike general operational database,
-                        VidarDB is designed for <strong>modern memory architecture</strong>. Fresh data sit in RAM first,
-                        and will be automatically flushed to secondary memory when RAM is full.
+                        Unlike general operational database, VidarDB is designed for <strong>modern memory architecture</strong>,
+                        with <strong>50X</strong> faster in data ingestion and <strong>1000X</strong> speedup querying recent data.
+                        Fresh data sit in RAM first, and will be automatically flushed to secondary memory when RAM is full.
                     </p>
                     <img src="/assets/images/landing/3-vidardb-ram.png">
                 </article>
@@ -79,9 +98,9 @@ body_class: landing
                     <h2>Responsive Data Analysis</h2>
                     <p>
                         Vidardb natively supports business intelligence. The <strong>Column Store</strong>,
-                        integral part of our underneath data structure, enables data analysis
+                        an integral part of our innovative data structure, enables data analysis
                         extremely responsive by fetching only portion of the data.
-                        Unlike general data warehouse, VidarDB ingests data up to <i><strong>1000X</strong></i> faster.
+                        Unlike general data warehouse, VidarDB ingests data up to <strong>1000X</strong> faster.
                     </p>
                     <img src="/assets/images/landing/4-column-store.png">
                 </article>
@@ -126,8 +145,3 @@ body_class: landing
         </div>
     </div>
 </div>
-
-<script src="https://cdn.plyr.io/3.5.10/plyr.js"></script>
-<script>
-    const player = new Plyr('#player');
-</script>
