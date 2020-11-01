@@ -13,6 +13,7 @@ body.landing {
         @include font-size-rem(32);
         font-weight: 400;
     }
+
     #one-liner {
         @include font-size-rem(32);
         font-weight: 300;
@@ -138,7 +139,7 @@ body.landing {
         }
 
         @include media($mobile) {
-            @include font-size-rem(40);
+            @include font-size-rem(31);
         }
     }
 
@@ -255,9 +256,9 @@ body.landing {
             @include omega-reset(2n);
             @include span-columns(5.5 of 12);
             @include omega(2n);
-            margin-right: rem(0);
+            // margin-right: rem(0);
             text-align: justify;
-            height: rem(480);
+            height: rem(460);
             overflow: hidden;
 
             h2 {
@@ -272,12 +273,12 @@ body.landing {
                 float: none;
                 width: 100%;
                 margin-top: rem(25);
-                margin-left: rem(0);
+                margin-left: rem(10);
             }
             &:nth-child(even) { @include shift(1); }
-
             .vidardb-video {
                 text-align: center;
+                margin-top: rem(50);
                 p {
                     height: 25px;
                 }
@@ -290,6 +291,7 @@ body.landing {
                     border-radius: 5px;
                     -moz-border-radius: 5px;
                     @include fill-parent;
+                    max-height: 268px;
                     height: 268px;
                 }
             }
@@ -313,6 +315,7 @@ body.landing {
                     border-radius: 5px;
                     -moz-border-radius: 5px;
                     @include fill-parent;
+                    max-height: 200px;
                     height: 120px;
                 }
             }
@@ -386,6 +389,14 @@ body.landing {
                 width: 80%;
                 margin-top: rem(0);
             }
+            &:nth-child(5) img {
+                width: 90%;
+                margin-top: rem(0);
+            }
+            &:nth-child(6) img {
+                width: 90%;
+                margin-top: rem(0);
+            }
         }
 
         @include media($mobile) {
@@ -393,6 +404,67 @@ body.landing {
                 @include fill-parent;
                 @include shift(0);
                 margin-bottom: $base-spacing*2;
+            }
+        }
+    }
+}
+
+.landing .ai-feature {
+    padding-top: $base-spacing*1.5;
+    padding-bottom: $base-spacing*1;
+    @include media($mobile) { padding: $base-spacing*2 0; }
+    background-color: #fff;
+    height: rem(500);
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    &.modern-stacks {
+        padding-top: $base-spacing*2;
+        padding-bottom: 0;
+        opacity: 1;
+
+        article {
+            margin-bottom: $base-spacing*1;
+        }
+
+        .feature-content {
+            @include outer-container;
+            padding-right: 0;
+            padding-top: $base-spacing*1.5;
+        }
+
+        .column-left {
+            width: 33%;
+            left: 0;
+            position: absolute;
+        }
+        .column-center {
+            width: 33%;
+            margin-left: 32%;
+            position: absolute;
+        }
+        .column-right {
+            width: 33%;
+            right: 0;
+            position: absolute;
+        }
+
+        @include media($mobile) {
+            // div, div:nth-child(n) {
+            //     @include fill-parent;
+            //     @include shift(0);
+            //     height: rem(280);
+            //     margin-bottom: $base-spacing*2;
+            // }
+
+            height: rem(280);
+            .column-center {
+                margin-left: 30%;
+            }
+            h4 {
+                @include font-size-rem(9.5);
             }
         }
     }
@@ -417,13 +489,20 @@ body.landing {
     .half_container_divider { margin-left: 4%; }
     .half_container_image { width: 30%; float: left; }
     .half_container_image img { width: 100%; }
-    .half_container_text { width: 65%; float: right; }
+    .half_container_text {
+        width: 65%;
+        float: right;
+
+        h2 {
+            font-weight: 500;
+            @include font-size-rem(20);
+        }
+    }
     .boxes_divider { display: none; }
     .three_container { width: 30%; vertical-align: top; text-align: center; float: left; }
     .three_container_divider { width: 5%; vertical-align: top; height: 5px; float: left; }
     .small_print { font-size: 14px; color: #b9b9b9; }
     .regular_divider { width: 100%; clear: both; height: 0px; margin-top: 48px; display: inline-block; }
-    .mobile_margin_bottom_needed {}
 
     @include media($mobile) {
         .half_container, half_container_divider {
