@@ -405,6 +405,9 @@ body.landing {
                 @include fill-parent;
                 @include shift(0);
                 margin-bottom: $base-spacing*2;
+            } 
+            article:nth-child(5) img {
+                height: 60%;
             }
         }
     }
